@@ -42,4 +42,4 @@ function updateClicks() {
 }
 ```
 
-### 
+### Returning value from inner function
