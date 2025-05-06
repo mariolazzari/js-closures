@@ -57,3 +57,7 @@ function calcTax(base) {
 const tax20 = calcTax(20);
 tax20(25); // 45 
 ```
+
+### Parallel closures
+
+Create references to multiple closures
