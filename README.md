@@ -43,3 +43,17 @@ function updateClicks() {
 ```
 
 ### Returning value from inner function
+
+Outer unction returns a reference of inner function.
+
+```js
+function calcTax(base) {
+  return tax => {
+    const total = calcTotal(base, tax);
+    return total;
+  };
+}
+
+const tax20 = calcTax(20);
+tax20(25); // 45 
+```
