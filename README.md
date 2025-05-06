@@ -60,4 +60,49 @@ tax20(25); // 45
 
 ### Parallel closures
 
-Create references to multiple closures
+Create references to multiple closures.
+
+```js
+function updateClicks() {
+  const clicks = {};
+
+  function reportClicks(item) {
+    clicks[item] = (clicks[item] || 0) + 1;
+    console.log(item, clicks);
+  }
+
+  return reportClicks;
+}
+
+const reportActivities = updateClicks();
+const reportProducts = updateClicks();
+```
+
+## Creating and using closures
+
+### Module pattern
+
+Returns an object, containing props and methods, using IIFE (Immediatly invoked function expression).
+
+- encapsulate code
+- expose subset on methods and props
+- protect values
+- specific access
+- avoid global space
+
+```js
+const updateClicks = (function () {
+  const choices = [];
+
+  return {
+    addChoice: function (newChoice) {
+      choices.push(newChoice);
+    },
+    getChoices: function () {
+      return choices;
+    },
+  };
+})();
+```
+
+### 
