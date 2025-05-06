@@ -105,4 +105,11 @@ const updateClicks = (function () {
 })();
 ```
 
-### 
+### Avoid unintended closures
+
+Use *let* and / or *const* instead of *var*.
+
+### Use JavaSscript features
+
+- forEach
+- block scope
