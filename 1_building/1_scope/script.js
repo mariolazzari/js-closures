@@ -1,13 +1,3 @@
-# JavaScript closures
-
-## Building blocks of closures
-
-### Local and global scope
-
-- Global scope: variable available anywhere in the code.
-- Local scope: variable created and available only in a function.
-
-```js
 // global scope
 let forecast = "sunny";
 let tempC = 30;
@@ -20,9 +10,6 @@ function advise() {
   let tempF = (tempC * 9) / 5 + 32;
   console.log(`The temperature is ${tempF}°F`);
 }
-```
 
-### Nested functions
-
-
-
+// error: tempF is not defined
+// console.log(tempF);
